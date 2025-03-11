@@ -1,0 +1,74 @@
+/* ✅ Import Tailwind's base styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ✅ Apply default styles */
+body {
+  @apply bg-[#FFFBF7] text-[#59584A] font-sans leading-relaxed;
+}
+
+/* ✅ Custom utility classes */
+.container {
+  @apply max-w-7xl mx-auto px-6;
+}
+
+/* ✅ Typography */
+h1 {
+  @apply text-4xl font-bold text-[#4D688C];
+}
+
+h2 {
+  @apply text-3xl font-semibold text-[#4D688C];
+}
+
+h3 {
+  @apply text-2xl font-medium;
+}
+
+p {
+  @apply text-lg;
+}
+
+/* ✅ Buttons */
+.btn-primary {
+  @apply bg-[#e1b85d] text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-[#B8975E] transition-all;
+}
+
+.btn-secondary {
+  @apply bg-[#4D688C] text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-[#3D5773] transition-all;
+}
+
+/* ✅ Links */
+a {
+  @apply text-[#4D688C] font-medium transition-colors hover:text-[#2f4c72];
+}
+
+/* ✅ Navbar Styling */
+.navbar {
+  @apply bg-white shadow-md py-4;
+}
+
+.navbar ul {
+  @apply flex space-x-6 justify-center;
+}
+
+.navbar li {
+  @apply text-[#4D688C] font-medium hover:text-[#2f4c72] transition-all;
+}
+
+.nextImageContainer {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  > div {
+    position: unset !important;
+  }
+
+  .nextImage {
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+  }
+}

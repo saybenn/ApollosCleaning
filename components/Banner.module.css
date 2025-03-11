@@ -1,0 +1,30 @@
+.emblemContainer {
+  position: relative;
+  width: 100%;
+  height: 35px;
+  z-index: 10;
+}
+
+/* ✅ Softer curve in the middle */
+.emblem {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #4d688c, #ffffff); /* Gold gradient */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* ✅ Text Overlay */
+.textOverlay {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
