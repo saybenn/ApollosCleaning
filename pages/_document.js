@@ -4,6 +4,11 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        {/* Modern browsers (WebP) */}
+        <link rel="icon" type="image/webp" href="/favicon.webp" sizes="32x32" />
+
+        {/* Fallbacks for older browsers */}
+        <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
         {/* ✅ Load Google Fonts here instead of inside <Head> in _app.js */}
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />

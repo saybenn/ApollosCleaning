@@ -32,7 +32,7 @@ p {
 
 /* ✅ Buttons */
 .btn-primary {
-  @apply bg-[#e1b85d] text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-[#B8975E] transition-all;
+  @apply bg-[#e1b85d] text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-[#b8975e8c] transition-all;
 }
 
 .btn-secondary {

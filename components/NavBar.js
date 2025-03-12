@@ -50,16 +50,17 @@ const NavBar = ({ close, handleClose }) => {
       >
         {/* MOBILE NAVBAR */}
         <div className="lg:hidden flex justify-between items-center bg-white p-3">
-          <div className="w-1/2">
+          <div>
             <Link
-              className="flex items-center"
+              className="flex items-center gap-x-2"
               aria-label="Home Page"
               href="/"
               scroll={true}
             >
-              <p className="font-stix text-sky-950 flex flex-col text-3xl text-center">
-                <span>Apollos</span> <span>Cleaning</span>
+              <p className="font-stix text-sky-950 flex flex-col text-3xl text-left">
+                <span>Apollos</span> <span cl>Cleaning</span>
               </p>
+
               <div className="relative w-16 sm:w-32 md:w-40 h-auto mx-auto inline-block overflow-hidden">
                 <Image
                   className="object-contain"
@@ -67,18 +68,19 @@ const NavBar = ({ close, handleClose }) => {
                   width={160} // Base size
                   height={60}
                   alt="logo"
-                  src="/images/apollologo.png"
+                  src="/images/apollologo.webp"
                 />
               </div>
             </Link>{" "}
           </div>
 
-          <div className="w-1/2 ml-4">
+          <div className="ml-4">
             <a
-              className="flex items-center bg-sky-950 text-white rounded p-2 text-lg"
+              className="flex justify-center gap-x-2 items-center bg-sky-950 text-white rounded-lg px-1 py-2 text-sm lg:text-lg"
               href="tel:7572158619"
             >
-              Request A Quote
+              <AiOutlinePhone className="" fontSize="1.5em" />
+              <span className="text-right">Request A Quote</span>
             </a>
           </div>
         </div>
@@ -97,10 +99,10 @@ const NavBar = ({ close, handleClose }) => {
               <Image
                 className="object-contain"
                 priority
-                width={160} // Base size
-                height={60}
+                width={106} // Base size
+                height={40}
                 alt="logo"
-                src="/images/apollologo.png"
+                src="/images/apollologo.webp"
               />
             </div>
           </Link>
@@ -110,18 +112,18 @@ const NavBar = ({ close, handleClose }) => {
             href="/"
             scroll={true}
           >
-            <p className="font-stix text-[#4D688C] flex flex-col text-6xl text-center">
+            <p className="font-stix text-sky-950 flex flex-col text-6xl text-center">
               <span>Apollos Cleaning</span>
             </p>
           </Link>
           <ul>
             <li>
-              <span className="text-[#4D688C] text-2xl font-montserrat">
+              <span className="text-sky-950 text-2xl font-montserrat">
                 {" "}
                 Request A Quote
               </span>{" "}
               <a
-                className="flex text-white text-2xl bg-[#4D688C] rounded-xl px-2 py-2"
+                className="flex text-white text-2xl bg-sky-950 rounded-xl px-2 py-2 gap-x-2 hover:bg-[#4D688C] hover:text-white transition-all"
                 href="tel:7572158619"
               >
                 <AiOutlinePhone fontSize="1.5em" />

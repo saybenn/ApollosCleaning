@@ -224,9 +224,9 @@ const ContactForm = () => {
     //     </Col>
     //   </Row>
     // </Container>
-    <section id="contact" className="py-16 bg-gray-100">
+    <section id="contact" className="shadow-up-lg py-16 pb-16 bg-white">
       <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-lg p-8">
-        <h2 className="text-center text-4xl font-stix font-bold text-[#4D688C] mb-4 lg:text-5xl">
+        <h2 className="text-center text-5xl font-stix font-bold text-sky-950 mb-3 lg:text-6xl">
           Get in Touch
         </h2>
         <span className="block w-5/6 h-0.5 bg-[#d4b651] mx-auto mb-10"></span>
@@ -302,7 +302,7 @@ const ContactForm = () => {
           <div className="text-center">
             <button
               type="submit"
-              className="w-full bg-[#d4b651] text-white font-semibold py-3 rounded-md shadow-md hover:bg-[#B8975E] transition-all"
+              className="w-full bg-[#d4b651] text-white font-semibold py-3 rounded-md shadow-md hover:bg-[#cfbc7d] transition-all"
             >
               {buttonText}
             </button>
