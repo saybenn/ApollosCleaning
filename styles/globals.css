@@ -6,6 +6,7 @@
 /* ✅ Apply default styles */
 body {
   @apply bg-[#FFFBF7] text-[#59584A] font-sans leading-relaxed;
+  font-display: swap;
 }
 
 /* ✅ Custom utility classes */

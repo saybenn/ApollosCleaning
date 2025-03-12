@@ -103,7 +103,7 @@ export default function Services() {
               <div className="absolute inset-0">
                 <Image
                   src={service.image}
-                  alt={service.title}
+                  alt={service.name}
                   fill
                   className="object-cover"
                   priority

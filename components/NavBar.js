@@ -65,6 +65,7 @@ const NavBar = ({ close, handleClose }) => {
                 <Image
                   className="object-contain"
                   priority
+                  quality={80}
                   width={160} // Base size
                   height={60}
                   alt="logo"
@@ -99,6 +100,7 @@ const NavBar = ({ close, handleClose }) => {
               <Image
                 className="object-contain"
                 priority
+                quality={80}
                 width={106} // Base size
                 height={40}
                 alt="logo"

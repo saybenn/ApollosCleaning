@@ -13,10 +13,11 @@ export default function Home() {
         <div className="absolute inset-0">
           <Image
             src="/images/hero.webp"
-            alt="Cleaning Service"
+            alt="Apollos Cleaning Service"
             fill
             className="object-cover"
             priority
+            quality={80}
           />{" "}
           {/* Dark overlay */}
           <div className="absolute inset-0 bg-black/70"></div>{" "}
