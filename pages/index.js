@@ -26,7 +26,7 @@ export default function Home() {
         {/* Text Overlay */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
           <h1 className="text-white text-4xl sm:text-5xl lg:text-6xl font-bold">
-            A Cleaner Space, A Brighter Day
+            Anything and Everything Gets Cleaned
           </h1>
           <p className="text-white text-lg sm:text-xl mt-3 max-w-2xl">
             Professional cleaning services for your home, car, and business.
