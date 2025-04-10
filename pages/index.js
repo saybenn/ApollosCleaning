@@ -56,10 +56,10 @@ export default function Home() {
           <div className="flex justify-center mx-auto ">
             <a
               className="flex items-center justify-between bg-sky-950 text-white rounded-lg p-2 text-lg gap-x-2 hover:bg-[#4D688C] hover:text-white transition-all"
-              href="tel:7572158619"
+              href="tel:7575776352"
             >
               <AiOutlinePhone fontSize="1.5em" />
-              <span className="text-right">(757) 215-8619</span>
+              <span className="text-right">(757) 577-6352</span>
             </a>
           </div>
         </div>

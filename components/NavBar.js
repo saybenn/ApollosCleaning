@@ -6,47 +6,34 @@ import Link from "next/link";
 import Image from "next/image";
 
 const NavBar = ({ close, handleClose }) => {
-  //User Session
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  //State
-  const [show, setShow] = useState(false);
-  const [isShown, setIsShown] = useState(false);
-  const [navShow, setNavShow] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(false);
-
-  const controlNavbar = () => {
-    if (typeof window !== "undefined") {
-      if (window.scrollY > lastScrollY) {
-        // if scroll down hide the navbar
-        setNavShow(false);
-      } else {
-        // if scroll up show the navbar
-        setNavShow(true);
-      }
-
-      // remember current page location to use in the next move
-      setLastScrollY(window.scrollY);
-    }
-  };
-
-  //Use Effect
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", controlNavbar);
-      // cleanup function
-      return () => {
-        window.removeEventListener("scroll", controlNavbar);
-      };
-    }
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setIsVisible(window.scrollY < lastScrollY);
+      }
+      setLastScrollY(window.scrollY);
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
   return (
     <header>
       <nav
-        style={{
-          top: navShow ? "0px" : "-11%",
-          background: navShow || lastScrollY > 0 ? "white" : "transparent",
-        }}
+        className={`fixed z-50 top-0 left-0 w-full transition-all duration-300 ${
+          isVisible
+            ? isScrolled
+              ? "bg-white shadow-lg"
+              : "bg-transparent"
+            : "-translate-y-full"
+        }`}
       >
         {/* MOBILE NAVBAR */}
         <div className="lg:hidden flex justify-between items-center bg-white p-3">
@@ -78,7 +65,7 @@ const NavBar = ({ close, handleClose }) => {
           <div className="ml-4">
             <a
               className="flex justify-center gap-x-2 items-center bg-sky-950 text-white rounded-lg px-1 py-2 text-sm lg:text-lg"
-              href="tel:7572158619"
+              href="tel:7575776352"
             >
               <AiOutlinePhone className="" fontSize="1.5em" />
               <span className="text-right">Request A Quote</span>
@@ -86,10 +73,7 @@ const NavBar = ({ close, handleClose }) => {
           </div>
         </div>
         {/* DESKTOP NAVBAR */}
-        <div
-          className="p-4 hidden lg:flex flex-row justify-between items-center bg-white"
-          onMouseLeave={() => setIsShown(false)}
-        >
+        <div className="p-4 hidden lg:flex flex-row justify-between items-center bg-white">
           <Link
             className="flex items-center"
             aria-label="Home Page"
@@ -126,10 +110,10 @@ const NavBar = ({ close, handleClose }) => {
               </span>{" "}
               <a
                 className="flex text-white text-2xl bg-sky-950 rounded-xl px-2 py-2 gap-x-2 hover:bg-[#4D688C] hover:text-white transition-all"
-                href="tel:7572158619"
+                href="tel:7575776352"
               >
                 <AiOutlinePhone fontSize="1.5em" />
-                (757) 215-8619
+                (757) 577-6352
               </a>
             </li>
           </ul>

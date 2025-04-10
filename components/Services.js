@@ -1,11 +1,9 @@
 import Image from "next/image";
-import { FaBroom, FaCar, FaSwimmingPool, FaSprayCan } from "react-icons/fa";
 
 const services = [
   {
     id: 1,
     name: "Power Washing",
-    icon: <FaSprayCan />,
     image: "/images/power.webp",
     description:
       "Revitalize your home’s exterior with our high-pressure power washing service. Whether it's your driveway, sidewalks, deck, or siding, we use industrial-grade pressure washers and eco-friendly cleaning solutions to remove built-up dirt, grime, and mold. See your surfaces restored to their original look, giving your property instant curb appeal.",
@@ -13,23 +11,20 @@ const services = [
   {
     id: 2,
     name: "Car Detailing",
-    icon: <FaCar />,
     image: "/images/car.webp",
     description:
       "Your car deserves the best care, inside and out. Our detailing service includes deep interior cleaning with high-powered vacuums, steam cleaning for stubborn stains, and leather conditioning for a fresh, like-new feel. On the exterior, we use clay bar treatments, premium wax, and power polishers to bring back that showroom shine. Let us transform your vehicle and make every drive a luxury experience.",
   },
   {
     id: 3,
-    name: "Pool Cleaning",
-    icon: <FaSwimmingPool />,
-    image: "/images/pool.webp",
+    name: "Lawn Care",
+    image: "/images/lawn.webp",
     description:
-      "Enjoy a sparkling clean and safe swimming experience with our professional pool cleaning service. We use commercial-grade pool vacuums, skimmers, and eco-friendly chemical treatments to eliminate debris, algae, and bacteria. Our service includes water testing and balancing to ensure a healthy and crystal-clear pool, so all you have to do is dive in and relax.",
+      "Keep your yard looking sharp and healthly with our professional lawn care service. We use mowers, edgers, and blowers to give your lawn a clean, manicured finish. We  handle mowing, trimming, and edging with precision, and also offer fertilization and weed control to promote vibrant, lush growth. All you have to do is sit back and enjoy a perfectly groomed outdoor space.",
   },
   {
     id: 4,
     name: "Carpet Cleaning",
-    icon: <FaBroom />,
     image: "/images/carpet.webp",
     description:
       "Bring your carpets back to life with our deep-cleaning service. We use industrial-strength steam cleaners, powerful suction vacuums, and pet-safe, non-toxic cleaning solutions to remove stubborn stains, dust, and odors. Whether it's high-traffic areas, pet accidents, or just a refresh, our process leaves your carpets looking and smelling brand new.",
