@@ -37,14 +37,14 @@ const NavBar = ({ close, handleClose }) => {
       >
         {/* MOBILE NAVBAR */}
         <div className="lg:hidden flex justify-between items-center bg-white p-3">
-          <div>
+          <div className="md:w-1/2">
             <Link
               className="flex items-center gap-x-2"
               aria-label="Home Page"
               href="/"
               scroll={true}
             >
-              <p className="font-stix text-sky-950 flex flex-col text-3xl text-left">
+              <p className="font-stix text-sky-950 flex flex-col text-3xl text-left md:w-1/2 md:text-5xl">
                 <span>Apollos</span> <span cl>Cleaning</span>
               </p>
 
@@ -62,13 +62,13 @@ const NavBar = ({ close, handleClose }) => {
             </Link>{" "}
           </div>
 
-          <div className="ml-4">
+          <div className="ml-4 md:w-1/3">
             <a
-              className="flex justify-center gap-x-2 items-center bg-sky-950 text-white rounded-lg px-1 py-2 text-sm lg:text-lg"
+              className="flex justify-center gap-x-2 items-center bg-sky-950 text-white rounded-lg px-1 py-2 text-sm md:text-xl"
               href="tel:7575776352"
             >
               <AiOutlinePhone className="" fontSize="1.5em" />
-              <span className="text-right">Request A Quote</span>
+              <span className="text-right md:text-2xl">Request A Quote</span>
             </a>
           </div>
         </div>

@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main>
       {/* LANDING & HERO */}
-      <div className="font-montserrat relative w-full h-[500px] sm:h-[600px] lg:h-[700px] drop-shadow-xl">
+      <div className="font-montserrat relative w-full min-h-[600px] sm:min-h-[600px] lg:min-h-[600px] drop-shadow-xl">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
@@ -18,13 +18,14 @@ export default function Home() {
             className="object-cover"
             priority
             quality={80}
-          />{" "}
+            sizes="(min-width: 1280px) 1280px, (min-width: 1024px) 1024px, (min-width: 768px) 768px, 100vw"
+          />
           {/* Dark overlay */}
           <div className="absolute inset-0 bg-black/70"></div>{" "}
         </div>
 
         {/* Text Overlay */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+        <div className="absolute inset-0 flex flex-col items-center pt-24 md:pt-48 justify-center text-center px-6">
           <h1 className="text-white text-4xl sm:text-5xl lg:text-6xl font-bold">
             Anything and Everything Gets Cleaned
           </h1>
